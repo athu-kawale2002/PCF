@@ -38,10 +38,166 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="players.html">Players</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="shedule.html">Schedule</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="contact.html">Contact Us</a></li>
+                        <li class="nav-item px-lg-4">
+            <!-- Button trigger modal -->
+            <a class="nav-link text-uppercase" type="button" href="#" data-bs-toggle="modal" data-bs-target="#login-signup-modal">
+              Login/Signup
+            </a>
+          </li>
+                        <!-- <li class="dropdown nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">Welcome</a>
+            <ul>
+              <li><a type="button" href="/" data-bs-toggle="modal" data-bs-target="#profile-modal">Profile</a></li>
+              <li><a href="/logout">logout</a></li>
+            </ul>
+          </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
+        <!-- login and Register modal starts here . . . -->
+
+  <div class="modal fade" id="login-signup-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><span class="glyphicon glyphicon-lock"></span> Login Now!</h4>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/login" id="Login-Form" role="form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon my-2"><span class="glyphicon glyphicon-envelope"></span></div>
+                <input name="login_username" id="login_username" type="text" class="form-control input-lg my-2"
+                  placeholder="Enter Username" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                <input name="login_password" id="login_password" type="password" class="form-control input-lg my2"
+                  placeholder="Enter Password" required>
+              </div>
+            </div>
+            <!-- <div class="checkbox">
+              <label><input class="my-2" type="checkbox" value="" checked>Remember me</label>
+            </div> -->
+            <!-- {% csrf_token %} -->
+            <button type="submit" class="btn btn-success col-lg-12 btn-block btn-sm my-2">LOGIN</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>
+            <!-- <a data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#FP-modal" type="button">Forgot Password?</a> |  -->
+            <a data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#signup-modal" type="button">Register
+              Here!</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signup-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><span class="glyphicon glyphicon-lock"></span> Signup Now!</h4>
+        </div>
+        <div class="modal-body">
+          <form method="post" action='/signup' id="Signin-Form" role="form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                <input name="username" id="username" type="text" class="form-control input-lg"
+                  placeholder="Enter a unique Username" required data-parsley-type="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                <input name="phone" id="phone" type="text" class="form-control my-2 input-lg"
+                  placeholder="Enter Your Phone No." required data-parsley-type="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                <input name="email" id="email" type="email" class="form-control mb-2 input-lg"
+                  placeholder="Enter Your Email" required data-parsley-type="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                <input name="passwd" id="passwd" type="password" class="form-control mb-2 input-lg"
+                  placeholder="Enter Password" required data-parsley-length="[6, 10]" data-parsley-trigger="keyup">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                <input name="confirm_passwd" id="confirm_passwd" type="password" class="form-control mb-2 input-lg"
+                  placeholder="Retype Password" required data-parsley-equalto="#passwd" data-parsley-trigger="keyup">
+              </div>
+            </div>
+            <!-- {% csrf_token %} -->
+            <button type="submit" class="btn btn-success btn-block col-lg-12 mb-2 btn-sm">CREATE ACCOUNT!</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p>Already a Member ? <a data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#login-signup-modal"
+              type="button">Login Now?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- login and Register modal ends here . . . -->
+
+
+  <!-- The Profile modal starts here . . . -->
+  <div class="modal fade" id="profile-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><span class="glyphicon glyphicon-lock"></span> Your Profile</h4>
+          <p style="color: red;">This section is under developement . . .</p>
+        </div>
+        <div class="modal-body">
+          <div class="container text-center">
+            <div class="row">
+              <div class="ml-auto mr-auto">
+                <div class="profile">
+                  <div class="avatar p-3">
+                    <img src="{%static 'assets/img/blog/boy.png' %}" alt="Circle Image" height="100" width="100"
+                      class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <div class="name">
+                    <h5 class="title"><span>{{request.user}}</span></h5>
+                    <h6>Email: {{request.user.email}} Phone: {{request.user.Phone}}</h6>
+                    <div class="social-links">
+                      <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                      <a class="mx-2" href="#" class="facebook"><i class="bx bxl-linkedin"></i></a>
+                      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="description text-center">
+              <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick
+                Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid
+                groove structure. </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The Profile modal ends here . . . -->
         <section class="page-section clearfix">
             <div class="container">
                 <div class="intro">
@@ -73,7 +229,7 @@
             </div>
         </section>
         <footer class="footer text-faded text-center py-5">
-            <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2021</p></div>
+            <div class="container"><p class="m-0 small">Copyright &copy; Patils Combat Federation 2021</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
