@@ -6,14 +6,23 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Business Casual - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/logo2.svg" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<!-- Core theme CSS (includes Bootstrap)-->
+        <link href="assets/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <header>
@@ -62,7 +71,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title"><span class="glyphicon glyphicon-lock"></span>Fighter Login!</h4>
-        </div>
+        </div><hr style="height: 2.5px; background: black;">
         <div class="modal-body">
           <form method="post" action="/login" id="Login-Form" role="form">
             <div class="form-group">
@@ -83,7 +92,7 @@
               <label><input class="my-2" type="checkbox" value="" checked>Remember me</label>
             </div> -->
             <!-- {% csrf_token %} -->
-            <button type="submit" class="btn btn-success col-lg-12 btn-block btn-sm my-2">LOGIN</button>
+            <button type="submit" class="btn btn-primary col-lg-12 btn-block btn-sm my-2">LOGIN</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -101,7 +110,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title"><span class="glyphicon glyphicon-lock"></span> Register as a Fighter!</h4>
-        </div>
+        </div><hr style="height: 2.5px; background: black;">
         <div class="modal-body">
           <form method="post" action='/signup' id="Signin-Form" role="form">
             <div class="form-group">
@@ -140,7 +149,7 @@
               </div>
             </div>
             <!-- {% csrf_token %} -->
-            <button type="submit" class="btn btn-success btn-block col-lg-12 mb-2 btn-sm">CREATE ACCOUNT!</button>
+            <button type="submit" class="btn btn-primary btn-block col-lg-12 mb-2 btn-sm">CREATE ACCOUNT!</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -228,6 +237,11 @@
                 </div>
             </div>
         </section>
+        <section>
+          <div class="container">
+            
+          </div>
+        </section>
         <footer class="footer text-faded text-center py-5">
             <div class="container"><p class="m-0 small">Copyright &copy; Patils Combat Federation 2021</p></div>
         </footer>
@@ -235,5 +249,17 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/insertjs.js"></script>
+        <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
     </body>
 </html>
